@@ -4,7 +4,7 @@ OBJ = $(SRC:.cpp=.o)
 BIN = bin
 OBJDIR = obj
 
-LINKTHINGS = -Llib/SFML -lsfml-graphics -lsfml-system -lsfml-window -lsfml-audio -pthread -lX11 
+LINKTHINGS = -Llib/SFML -lsfml-graphics -lsfml-system -lsfml-window -lsfml-audio -pthread -lX11 -lGL
 INCLUDETHINGS = -Isrc/include/SFML -Isrc/include/
 
 all: makeit makeobj main 
