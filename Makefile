@@ -3,7 +3,7 @@ SRC = $(wildcard src/*.cpp)
 OBJ = $(SRC:.cpp=.o)
 BIN = bin
 
-LINKTHINGS = -Llib/SFML -lsfml-graphics -lsfml-system -lsfml-window -lsfml-audio
+LINKTHINGS = -Llib/SFML -lsfml-graphics -lsfml-system -lsfml-window -lsfml-audio -pthread -lX11
 INCLUDETHINGS = -Isrc/include/SFML
 
 all: makeit main clean
