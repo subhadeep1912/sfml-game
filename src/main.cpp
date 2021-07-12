@@ -2,6 +2,7 @@
 #include <iostream>
 #include <thread>
 #include <X11/Xlib.h>
+#include "include/imgui.h"
 
 
 void printStuff(sf::RenderWindow *window, const float WIDTH, const float HEIGHT)
@@ -30,16 +31,19 @@ int main()
     
     rectShape.setFillColor(sf::Color(sf::Color::Cyan));
     // std::thread th(printStuff, &window, WIDTH, HEIGHT);
+    // ImGui::Text("Hello, world %d", 123);
     
     while (window.isOpen())
     {
-        mainMovement(&window, WIDTH, HEIGHT, SPEED, &rectShape);
         
+        
+        mainMovement(&window, WIDTH, HEIGHT, SPEED, &rectShape);
+            
         // std::cout<<"YOO->"<<rectShape.getPosition().x<<rectShape.getPosition().y<<std::endl;
         // th2.detach();
         
         
-        // std::cout<<std::thread::hardware_concurrency()<<std::endl;
+        std::cout<<std::thread::hardware_concurrency()<<std::endl;
         
     }
     // th.detach();
